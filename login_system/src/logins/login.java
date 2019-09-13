@@ -41,6 +41,7 @@ public class login extends javax.swing.JFrame {
         btnlogin = new javax.swing.JButton();
         btnreset = new javax.swing.JButton();
         btnexit = new javax.swing.JButton();
+        jLabel4 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setPreferredSize(new java.awt.Dimension(1400, 704));
@@ -97,6 +98,8 @@ public class login extends javax.swing.JFrame {
             }
         });
 
+        jLabel4.setText("copy right belongs to S.R.Karan");
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -117,6 +120,10 @@ public class login extends javax.swing.JFrame {
                         .addComponent(btnexit))
                     .addComponent(txtusername))
                 .addGap(118, 118, 118))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(160, 160, 160)
+                .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 176, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -135,7 +142,9 @@ public class login extends javax.swing.JFrame {
                         .addComponent(btnexit)
                         .addComponent(btnreset))
                     .addComponent(btnlogin))
-                .addContainerGap(94, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 54, Short.MAX_VALUE)
+                .addComponent(jLabel4)
+                .addGap(26, 26, 26))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -183,10 +192,13 @@ kpassword.setText(null);// TODO add your handling code here:
      
         String password=kpassword.getText();
         String username=txtusername.getText();
+        DataProvider dialog = new DataProvider("Karan-Dialog");
+        dialog.setLocation("Chulipuram");
+        String location = dialog.getLocation();
         if(password.contains("srk")&&(username.contains("karan")))
         {
-            txtusername.setText("Enter your user name");
-            kpassword.setText("Enter your pass word");
+            txtusername.setText(null);
+            kpassword.setText(null);
           systemExit(); 
           login_s Info=new login_s();
           Info.setVisible(true);
@@ -243,6 +255,7 @@ kpassword.setText(null);// TODO add your handling code here:
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPasswordField kpassword;
