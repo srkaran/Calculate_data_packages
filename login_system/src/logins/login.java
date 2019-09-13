@@ -60,7 +60,6 @@ public class login extends javax.swing.JFrame {
         jLabel2.setText("Login System");
 
         jPanel1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 20, true));
-        jPanel1.setMinimumSize(null);
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jLabel1.setText("User Name");
@@ -186,8 +185,8 @@ kpassword.setText(null);// TODO add your handling code here:
         String username=txtusername.getText();
         if(password.contains("srk")&&(username.contains("karan")))
         {
-            txtusername.setText(null);
-            kpassword.setText(null);
+            txtusername.setText("Enter your user name");
+            kpassword.setText("Enter your pass word");
           systemExit(); 
           login_s Info=new login_s();
           Info.setVisible(true);
